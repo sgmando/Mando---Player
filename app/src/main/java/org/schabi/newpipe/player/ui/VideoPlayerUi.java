@@ -59,6 +59,9 @@ import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.CaptionStyleCompat;
 import com.google.android.exoplayer2.video.VideoSize;
 
+import com.google.android.gms.cast.framework.CastButtonFactory;
+import com.google.android.gms.cast.framework.CastContext;
+
 import org.schabi.newpipe.App;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.PlayerBinding;
@@ -167,6 +170,9 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
     }
 
     private void initViews() {
+        CastContext.getSharedInstance(context);
+        CastButtonFactory.setUpMediaRouteButton(context, binding.castButton);
+
         setupSubtitleView();
 
         binding.resizeTextView

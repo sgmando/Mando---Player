@@ -15,6 +15,7 @@ autoservice-zacsweers = "1.2.0"
 bridge = "v2.0.2"
 browser = "1.10.0"
 cardview = "1.0.0"
+cast-framework = "22.3.1"
 checkstyle = "13.8.0" # See https://github.com/checkstyle/checkstyle/issues/21175
 coil = "3.5.0"
 compose = "1.12.0"
@@ -118,6 +119,7 @@ facebook-stetho-core = { module = "com.facebook.stetho:stetho", version.ref = "s
 facebook-stetho-okhttp3 = { module = "com.facebook.stetho:stetho-okhttp3", version.ref = "stetho" }
 google-android-material = { module = "com.google.android.material:material", version.ref = "material" }
 google-autoservice-annotations = { module = "com.google.auto.service:auto-service-annotations", version.ref = "autoservice-google" }
+google-cast-framework = { module = "com.google.android.gms:play-services-cast-framework", version.ref = "cast-framework" }
 google-exoplayer-core = { module = "com.google.android.exoplayer:exoplayer-core", version.ref = "exoplayer" }
 google-exoplayer-dash = { module = "com.google.android.exoplayer:exoplayer-dash", version.ref = "exoplayer" }
 google-exoplayer-database = { module = "com.google.android.exoplayer:exoplayer-database", version.ref = "exoplayer" }

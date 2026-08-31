@@ -249,6 +249,7 @@ dependencies {
     implementation(libs.androidx.work.runtime)
     implementation(libs.androidx.work.rxjava3)
     implementation(libs.google.android.material)
+    implementation(libs.google.cast.framework)
     implementation(libs.androidx.webkit)
 
     // Coroutines interop

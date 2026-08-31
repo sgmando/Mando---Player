@@ -258,6 +258,15 @@
                         app:tint="@color/white"
                         tools:ignore="RtlHardcoded" />
 
+                    <androidx.mediarouter.app.MediaRouteButton
+                        android:id="@+id/castButton"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/mando_cast"
+                        android:padding="5dp" />
+
                     <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/moreOptionsButton"
                         android:layout_width="wrap_content"
