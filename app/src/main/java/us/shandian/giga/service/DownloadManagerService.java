@@ -150,7 +150,7 @@ public class DownloadManagerService extends Service {
                 openDownloadListIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT, false);
 
-        icLauncher = BitmapFactory.decodeResource(this.getResources(), R.mipmap.ic_launcher);
+        icLauncher = BitmapFactory.decodeResource(this.getResources(), R.drawable.ic_mando_launcher);
 
         Builder builder = new Builder(this, getString(R.string.notification_channel_id))
                 .setContentIntent(mOpenDownloadList)

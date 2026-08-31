@@ -63,17 +63,17 @@ configure<ApplicationExtension> {
             // suffix the app id and the app name with git branch name
             if (normalizedWorkingBranch.isEmpty() || workingBranch in defaultBranches) {
                 applicationIdSuffix = ".debug"
-                resValue("string", "app_name", "Mando Player Debug")
+                resValue("string", "app_name", "Mando Player")
             } else {
                 applicationIdSuffix = ".debug.$normalizedWorkingBranch"
-                resValue("string", "app_name", "Mando Player $workingBranch")
+                resValue("string", "app_name", "Mando Player")
             }
         }
 
         release {
             System.getProperty("packageSuffix")?.let { suffix ->
                 applicationIdSuffix = suffix
-                resValue("string", "app_name", "Mando Player $suffix")
+                resValue("string", "app_name", "Mando Player")
             }
             isMinifyEnabled = true
             isShrinkResources = true
@@ -91,10 +91,10 @@ configure<ApplicationExtension> {
             // suffix the app id and the app name with git branch name
             if (normalizedWorkingBranch.isEmpty() || workingBranch in defaultBranches) {
                 applicationIdSuffix = ".continuous"
-                resValue("string", "app_name", "Mando Player Continuous")
+                resValue("string", "app_name", "Mando Player")
             } else {
                 applicationIdSuffix = ".continuous.$normalizedWorkingBranch"
-                resValue("string", "app_name", "Mando Player $workingBranch")
+                resValue("string", "app_name", "Mando Player")
             }
         }
     }

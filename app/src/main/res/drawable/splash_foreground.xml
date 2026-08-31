@@ -1,10 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="100dp"
-    android:height="100dp"
-    android:viewportWidth="100"
-    android:viewportHeight="100">
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Electric blue outer ring -->
     <path
-        android:fillColor="#ffffff"
-        android:pathData="m23.909,10.211v78.869c0,0 7.7,-4.556 12.4,-7.337V67.477,56.739 31.686c0,0 3.707,2.173 8.948,5.24 6.263,3.579 14.57,8.565 21.473,12.655 -9.358,5.483 -16.8,9.876 -22.496,13.234V77.053C57.974,68.927 75.176,58.762 90.762,49.581 75.551,40.634 57.144,29.768 43.467,21.715 31.963,14.94 23.909,10.211 23.909,10.211Z"
-        android:strokeWidth="1.2782383" />
+        android:fillColor="#2979FF"
+        android:pathData="M54,4 C81.6,4 104,26.4 104,54 C104,81.6 81.6,104 54,104 C26.4,104 4,81.6 4,54 C4,26.4 26.4,4 54,4 Z" />
+
+    <!-- Black inner face -->
+    <path
+        android:fillColor="#05070B"
+        android:pathData="M54,10 C78.3,10 98,29.7 98,54 C98,78.3 78.3,98 54,98 C29.7,98 10,78.3 10,54 C10,29.7 29.7,10 54,10 Z" />
+
+    <!-- Blue MP / M shape -->
+    <path
+        android:fillColor="#147DFF"
+        android:pathData="M24,82 L24,28 L38,28 L54,46 L70,28 L84,28 L84,82 L70,82 L70,50 L54,68 L38,50 L38,82 Z" />
+
+    <!-- White play button -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,42 L47,66 L68,54 Z" />
+
 </vector>
