@@ -39,11 +39,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.fragment.app.FragmentActivity;
+import androidx.mediarouter.app.MediaRouteButton;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.exoplayer2.ui.SubtitleView;
 import com.google.android.exoplayer2.video.VideoSize;
+
+import com.google.android.gms.cast.framework.CastButtonFactory;
 
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.PlayerBinding;
@@ -168,6 +171,18 @@ public final class MainPlayerUi extends VideoPlayerUi implements View.OnLayoutCh
         binding.queueButton.setOnClickListener(v -> onQueueClicked());
         binding.segmentsButton.setOnClickListener(v -> onSegmentsClicked());
 
+        // The player itself lives in PlayerService, but Android's MediaRouteButton
+        // needs a FragmentActivity to display the Cast chooser. Create the
+        // dialog button with the real parent activity only when the user taps Cast.
+        binding.castButton.setOnClickListener(v ->
+                getParentActivity().ifPresent(activity -> {
+                    final MediaRouteButton castDialogButton =
+                            new MediaRouteButton(activity);
+                    CastButtonFactory.setUpMediaRouteButton(
+                            activity, castDialogButton);
+                    castDialogButton.showDialog();
+                }));
+
         binding.addToPlaylistButton.setOnClickListener(v ->
                 getParentActivity().map(FragmentActivity::getSupportFragmentManager)
                         .ifPresent(fragmentManager ->
@@ -200,6 +215,7 @@ public final class MainPlayerUi extends VideoPlayerUi implements View.OnLayoutCh
 
         binding.queueButton.setOnClickListener(null);
         binding.segmentsButton.setOnClickListener(null);
+        binding.castButton.setOnClickListener(null);
         binding.addToPlaylistButton.setOnClickListener(null);
 
         context.getContentResolver().unregisterContentObserver(settingsContentObserver);
